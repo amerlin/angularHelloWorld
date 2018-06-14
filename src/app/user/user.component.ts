@@ -23,7 +23,7 @@ export class UserComponent implements OnInit {
     console.log('user component onInit');
   }
 
-  // delete user
+  // delete user (user from component)
   deleteUser(user) {
     alert(user.name);
   }
