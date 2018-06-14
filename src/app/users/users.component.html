@@ -1,0 +1,32 @@
+<h2>This is {{ title }}  components</h2>
+
+<!-- There are {{ users.length }} users -->
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>LastName</th>
+        <th>Email</th>
+        <th>Fiscal Code</th>
+        <th>Telephone</th>
+        <th>Provincia</th> 
+    </tr>
+
+    <!-- <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.fiscalcode}}</td>
+        <td>{{user.telephone}}</td>
+        <td>{{user.province}}</td>
+    </tr> -->
+
+    <!-- <tr>
+        <th colspan="6"></th>
+    </tr> -->
+
+    <!-- pass data to variable user (that module receive with @Input() -->
+    <tr app-user *ngFor ="let user of users" [user-data]="user"></tr>
+
+
+</table>
