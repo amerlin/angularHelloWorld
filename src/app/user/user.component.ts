@@ -12,9 +12,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class UserComponent implements OnInit {
 
   // with alias
+  // accept external variable named input
   // tslint:disable-next-line:no-input-rename
-  @Input('user-data') user;    // accept external variable named input
-
+  @Input('user-data') user;
   // constructor
   constructor() { }
 
