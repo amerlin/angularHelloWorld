@@ -23,4 +23,9 @@ export class UserComponent implements OnInit {
     console.log('user component onInit');
   }
 
+  // delete user
+  deleteUser(user) {
+    alert(user.name);
+  }
+
 }
