@@ -1,1 +1,2 @@
-td {background-color: red;}
+td {background-color: lightgray;padding: 10px;}
+button.delete { background: #fff; color: red; }
