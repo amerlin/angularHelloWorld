@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { UserService } from '../users/user.service';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 // component definition
 @Component({
@@ -36,7 +36,7 @@ export class UserComponent implements OnInit {
     // this.service.deleteUser(user);    // local event
 
     // emit event to exteral
-    this.userDeleted.emit(this.user);
+    this.userDeleted.emit(user);
 
   }
 
