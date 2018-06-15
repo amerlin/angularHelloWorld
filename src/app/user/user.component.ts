@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { UserService } from '../users/user.service';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';           // this from core
 
 // component definition
 @Component({
