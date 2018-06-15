@@ -27,8 +27,9 @@ export class UsersComponent implements OnInit {
         this.users = this.service.getUser();
     }
 
+    // delete method
     onDeleteUser(user) {
-        alert(user.lastname);
+        this.service.deleteUser(user);
     }
 
 }

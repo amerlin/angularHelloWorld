@@ -35,8 +35,6 @@ export class UserComponent implements OnInit {
   deleteUser(user) {
     // this.service.deleteUser(user);    // local event
 
-    console.log('delete user');
-
     // emit event out (to parent)
     this.userDeleted.emit(this.user);
 
