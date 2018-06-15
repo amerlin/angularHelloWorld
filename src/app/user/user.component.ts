@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { UserService } from '../users/user.service';
 
 // component definition
 @Component({
@@ -16,7 +17,7 @@ export class UserComponent implements OnInit {
   // tslint:disable-next-line:no-input-rename
   @Input('user-data') user;
   // constructor
-  constructor() { }
+  constructor(private service: UserService) { }
 
   // init
   ngOnInit() {
@@ -25,7 +26,7 @@ export class UserComponent implements OnInit {
 
   // delete user (user from component)
   deleteUser(user) {
-    alert(user.name);
+    this.service.deleteUser(user);
   }
 
 }
