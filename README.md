@@ -1,6 +1,6 @@
 # Project Info
 
-This is a simple Angular 5 site
+This is a simple Angular 5 site.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
