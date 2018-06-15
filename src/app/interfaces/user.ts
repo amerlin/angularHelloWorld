@@ -1,4 +1,5 @@
 // interface with no type
+// interface for typed data
 export interface User {
     name;
     lastname;
