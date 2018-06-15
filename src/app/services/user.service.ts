@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../interfaces/user';
 
 // this service can have dependency
 @Injectable()
@@ -7,14 +8,15 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
     // local var
-    private _users = [
+    private _users: Array<User> = [
         {
             name: 'Name001',
             lastname: 'LastName001',
             email: 'email001',
             fiscalcode: 'fiscalcode001',
             province: 'province001',
-            telephone: 'telephone001'
+            telephone: '1231',
+            age: '12'
         },
         {
             name: 'Name002',
@@ -22,7 +24,8 @@ export class UserService {
             email: 'email002',
             fiscalcode: 'fiscalcode002',
             province: 'province002',
-            telephone: 'telephone002'
+            telephone: '1231',
+            age: '12'
         },
         {
             name: 'Name003',
@@ -30,7 +33,8 @@ export class UserService {
             email: 'email003',
             fiscalcode: 'fiscalcode003',
             province: 'province003',
-            telephone: 'telephone003'
+            telephone: '1231',
+            age: '12'
         },
         {
             name: 'Name004',
@@ -38,7 +42,8 @@ export class UserService {
             email: 'email004',
             fiscalcode: 'fiscalcode004',
             province: 'province004',
-            telephone: 'telephone004'
+            telephone: '1231',
+            age: '12'
         }
     ];
 
