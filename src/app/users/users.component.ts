@@ -28,8 +28,11 @@ export class UsersComponent implements OnInit {
         this.users = this.service.getUser();
     }
 
-    onDeleteUser(user) {
+    onDeleteUser(user: User) {
         this.service.deleteUser(user);
     }
 
+    onSelectUser(user: User) {
+        console.log('user selected: ' + user.lastname);
+    }
 }
