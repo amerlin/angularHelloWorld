@@ -1,11 +1,11 @@
 <form>
   <div class="form-group">
     <label for="firstname">First name</label>
-    <input name="firstname" id="firstname">
+    <input ng-model="user.firstname" name="firstname" id="firstname">
   </div>
   <div class="form-group">
-    <label for="lastname">First name</label>
-    <input name="lastname" id="lastname">
+    <label for="lastname">LastName</label>
+    <input name="lastname" [(ng-module)]="user.lastname" id="lastname">
   </div>
   <div class="form-group">
     <label for="fiscalcode">Fiscal code</label>
