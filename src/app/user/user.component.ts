@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
-import { UserService } from '../users/user.service';
+import { UserService } from '../services/user.service';
 import { EventEmitter } from '@angular/core';
 
 // component definition

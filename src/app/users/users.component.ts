@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';          // default library from core
-import { UserService } from './user.service';               // Import service class
+import { UserService } from '../services/user.service';     // Import service class
 
 // component definition
 @Component({
