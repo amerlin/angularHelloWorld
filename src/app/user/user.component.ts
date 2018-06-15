@@ -23,6 +23,8 @@ export class UserComponent implements OnInit {
   // tslint:disable-next-line:no-output-rename
   @Output('onDeleteUser') userDeleted = new EventEmitter;
 
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onSelectUser = new EventEmitter;
 
   // constructor
   constructor(private service: UserService) { }
@@ -33,12 +35,17 @@ export class UserComponent implements OnInit {
   }
 
   // delete user (user from component)
-  deleteUser(user) {
+  deleteUser() {
     // this.service.deleteUser(user);    // local event
 
     // emit event to exteral
-    this.userDeleted.emit(user);
+    this.userDeleted.emit(this.user);
 
+  }
+
+  updateUser() {
+    console.log('update user');         // send to parent
+    this.onSelectUser.emit(this.user);
   }
 
 }
