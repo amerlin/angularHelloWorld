@@ -10,7 +10,9 @@
     </tr>
    
     <!-- pass data to variable user (that module receive with @Input() -->
-    <tr app-user *ngFor ="let user of users" [user-data]="user" (onUserDeleted)="onDeleteUser(event)"></tr>
+    <!-- receive data from child and goto local onDeleteUser-->
+    <!-- note $event angular var -->
+    <tr app-user *ngFor ="let user of users" [user-data]="user" (onDeleteUser)="onDeleteUser($event)"></tr>
 
 
 </table>
