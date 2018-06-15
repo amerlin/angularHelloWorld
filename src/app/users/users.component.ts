@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';          // default library from core
+import { Component, OnInit, Output } from '@angular/core';          // default library from core
 import { UserService } from '../services/user.service';     // Import service class
 import { User } from '../interfaces/user';
+import { EventEmitter } from '@angular/core';
 
 // component definition
 @Component({
@@ -23,6 +24,8 @@ export class UsersComponent implements OnInit {
     constructor(private service: UserService) {
     }
 
+    @Output() updateUser = new EventEmitter<User>();
+
     // called when component is ready
     ngOnInit() {
         this.users = this.service.getUser();
@@ -33,6 +36,6 @@ export class UsersComponent implements OnInit {
     }
 
     onSelectUser(user: User) {
-        console.log('user selected: ' + user.lastname);
+        this.updateUser.emit(user);
     }
 }

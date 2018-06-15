@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpModule } from '@angular/http';
+import { User } from './interfaces/user';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,11 @@ import { HttpModule } from '@angular/http';
 export class AppComponent {
   title = 'app';
   sample = 'sample text';
+
+  userSelected: User;
+
+  updateUser(user: User) {
+    this.userSelected = user;
+  }
+
 }
