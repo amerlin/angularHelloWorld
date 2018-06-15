@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';          // default library from core
-import { UserService } from './user.service';               // Import service class
+import { UserService } from '../services/user.service';     // Import service class
+import { User } from '../interfaces/user';
 
 // component definition
 @Component({
@@ -13,7 +14,7 @@ export class UsersComponent implements OnInit {
     title = 'Users';
 
     // Users from service
-    users = [];
+    users: User[] = [];
 
     // Dependency injection
     // add in app.module.ts UserService in providers section
