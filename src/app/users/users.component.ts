@@ -1,6 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';          // default library from core
 import { UserService } from '../services/user.service';     // Import service class
-import { User } from '../interfaces/user';
+import { User } from '../class/Users';
 import { EventEmitter } from '@angular/core';
 
 // component definition

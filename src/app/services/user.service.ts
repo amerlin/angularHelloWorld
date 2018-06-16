@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserInterface } from '../interfaces/user';
+import { User } from '../class/Users';
 
 // this service can have dependency
 @Injectable()
@@ -8,7 +8,7 @@ import { UserInterface } from '../interfaces/user';
 export class UserService {
 
     // local var
-    private _users: Array<UserInterface> = [
+    private _users: Array<User> = [
         {
             id:  1,
             name: 'Name001',

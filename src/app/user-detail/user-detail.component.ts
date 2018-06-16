@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserInterface } from '../interfaces/user';
-import { FormsModule } from '@angular/forms';
+import { User } from '../class/Users';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,7 +11,7 @@ export class UserDetailComponent implements OnInit {
 
   constructor() { }
 
-  @Input() user: UserInterface;
+  @Input() user: User;
 
   ngOnInit() {
   }
