@@ -7,7 +7,7 @@ import { User } from '../class/Users';
 // USER SERVICE
 export class UserService {
 
-    // local var
+    // LOCAL
     private _users: Array<User> = [
         {
             id:  1,
