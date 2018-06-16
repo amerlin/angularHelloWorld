@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { EventEmitter } from '@angular/core';
-import { User } from '../interfaces/user';
+import { UserInterface } from '../interfaces/user';
 
 // component definition
 @Component({
@@ -17,7 +17,7 @@ export class UserComponent implements OnInit {
   // with alias
   // accept external variable named input
   // tslint:disable-next-line:no-input-rename
-  @Input('user-data') user: User;
+  @Input('user-data') user: UserInterface;
 
   // output variable
   // tslint:disable-next-line:no-output-rename

@@ -1,6 +1,6 @@
-// interface with no type
-// interface for typed data
-export interface UserInterface {
+import { UserInterface } from '../interfaces/user';
+
+export class User implements UserInterface {
     id;
     name;
     lastname;
