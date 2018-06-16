@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './services/user.service';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
-
 
 @NgModule({
   declarations: [
@@ -17,7 +16,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     UserDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
