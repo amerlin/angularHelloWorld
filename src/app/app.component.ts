@@ -12,9 +12,11 @@ export class AppComponent {
   title = 'app';
   sample = 'sample text';
 
-  userSelected: User;
+  showForm = false;
+  userSelected: User = new User();
 
   updateUser(user: User) {
+    this.showForm = true;
     this.userSelected = user;
   }
 

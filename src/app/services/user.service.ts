@@ -17,7 +17,7 @@ export class UserService {
             fiscalcode: 'fiscalcode001',
             province: 'province001',
             telephone: '1231',
-            age: '12'
+            age: 20
         },
         {
             id: 2,
@@ -27,7 +27,7 @@ export class UserService {
             fiscalcode: 'fiscalcode002',
             province: 'province002',
             telephone: '1231',
-            age: '12'
+            age: 20
         },
         {
             id: 3,
@@ -37,7 +37,7 @@ export class UserService {
             fiscalcode: 'fiscalcode003',
             province: 'province003',
             telephone: '1231',
-            age: '12'
+            age: 20
         },
         {
             id: 4,
@@ -47,7 +47,7 @@ export class UserService {
             fiscalcode: 'fiscalcode004',
             province: 'province004',
             telephone: '1231',
-            age: '12'
+            age: 20
         }
     ];
 

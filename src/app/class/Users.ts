@@ -13,7 +13,7 @@ export class User implements UserInterface {
     // class constructor
     // sampe inizialize
     constructor() {
-        this.id = 0;
+        this.id = 0;            // default for new users
         this.name = '';
         this.lastname = '';
         this.email = '';

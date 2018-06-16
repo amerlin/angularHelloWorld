@@ -19,7 +19,7 @@ export class UserDetailComponent implements OnInit {
   // save user
   saveUser() {
     console.log('save user');
-    alert(this.user.name);
+    alert(this.user.id);
   }
 
 }
