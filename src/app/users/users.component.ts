@@ -36,6 +36,10 @@ export class UsersComponent implements OnInit {
     }
 
     onSelectUser(user: User) {
-        this.updateUser.emit(user);
+        // copy object
+        // when edit form table not update
+
+        const userCopy  = Object.assign({}, user);
+        this.updateUser.emit(userCopy);
     }
 }

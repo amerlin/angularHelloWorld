@@ -44,7 +44,6 @@ export class UserComponent implements OnInit {
   }
 
   updateUser() {
-    console.log('update user');         // send to parent
     this.onSelectUser.emit(this.user);
   }
 
