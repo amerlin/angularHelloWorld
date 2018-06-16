@@ -12,8 +12,18 @@ export class UserDetailComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
+  private userCopy: User;
+  private _user: User;
+
   // input element
-  @Input() user: User;
+  @Input() set user(user: User) {
+    this._user = user;
+    this.userCopy = Object.assign({},user);
+  }
+
+  get user() {
+    return this._user;
+  }
 
   ngOnInit() {
   }
@@ -38,7 +48,7 @@ export class UserDetailComponent implements OnInit {
         this.user = new User();
       }
       if ( this.user.id > 0 ) {       // reset exit user
-          form.reset();
+          this.user = this.userCopy;
       }
   }
 
