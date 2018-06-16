@@ -1,6 +1,7 @@
 // interface with no type
 // interface for typed data
-export interface User {
+export interface UserInterface {
+    id;
     name;
     lastname;
     email;

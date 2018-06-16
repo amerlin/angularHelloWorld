@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';          // default library from core
+import { Component, OnInit, Output } from '@angular/core';          // default library from core
 import { UserService } from '../services/user.service';     // Import service class
-import { User } from '../interfaces/user';
+import { User } from '../class/Users';
+import { EventEmitter } from '@angular/core';
 
 // component definition
 @Component({
@@ -23,13 +24,22 @@ export class UsersComponent implements OnInit {
     constructor(private service: UserService) {
     }
 
+    @Output() updateUser = new EventEmitter<User>();
+
     // called when component is ready
     ngOnInit() {
         this.users = this.service.getUser();
     }
 
-    onDeleteUser(user) {
+    onDeleteUser(user: User) {
         this.service.deleteUser(user);
     }
 
+    onSelectUser(user: User) {
+        // copy object
+        // when edit form table not update
+
+        const userCopy  = Object.assign({}, user);
+        this.updateUser.emit(userCopy);
+    }
 }

@@ -1,3 +1,4 @@
 td {background-color: lightgray;padding: 10px;}
 button.delete { background: #fff; color: red; }
+button.delete { background: #fff; color: green; }
 button {padding:5px; border:1px solid; color:#222; width: 80px;}

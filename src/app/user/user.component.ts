@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { EventEmitter } from '@angular/core';
-import { User } from '../interfaces/user';
+import { User } from '../class/Users';
 
 // component definition
 @Component({
@@ -23,6 +23,8 @@ export class UserComponent implements OnInit {
   // tslint:disable-next-line:no-output-rename
   @Output('onDeleteUser') userDeleted = new EventEmitter;
 
+  // tslint:disable-next-line:no-output-on-prefix
+  @Output() onSelectUser = new EventEmitter;
 
   // constructor
   constructor(private service: UserService) { }
@@ -33,12 +35,16 @@ export class UserComponent implements OnInit {
   }
 
   // delete user (user from component)
-  deleteUser(user) {
+  deleteUser() {
     // this.service.deleteUser(user);    // local event
 
     // emit event to exteral
-    this.userDeleted.emit(user);
+    this.userDeleted.emit(this.user);
 
+  }
+
+  updateUser() {
+    this.onSelectUser.emit(this.user);
   }
 
 }

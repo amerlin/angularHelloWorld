@@ -1,2 +1,3 @@
-/* h1 {background-color: red;} */
-
+.users { float:left; width: 60%;}
+.userDetail {float: left; width: 30%;}
+.main {width: 98%;margin:auto; vertical-align: top;}

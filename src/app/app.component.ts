@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { User } from './class/Users';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,13 @@ import { HttpModule } from '@angular/http';
 export class AppComponent {
   title = 'app';
   sample = 'sample text';
+
+  showForm = false;
+  userSelected: User = new User();
+
+  updateUser(user: User) {
+    this.showForm = true;
+    this.userSelected = user;
+  }
+
 }
