@@ -72,4 +72,9 @@ export class UserService {
         }
     }
 
+    // CREATE NEW USER
+    createUser(user: User) {
+        this._users.splice(0, 1, user);
+    }
+
 }
