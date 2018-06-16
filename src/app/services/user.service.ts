@@ -67,7 +67,7 @@ export class UserService {
     // FIND AND UPDATE USER
     updateUser(user: User) {
         const index = this._users.findIndex((v) => v.id === user.id);
-        if ( index > -1) {
+        if ( index > -1 ) {
             this._users[index] = user;
         }
     }
