@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../class/Users';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -9,7 +10,7 @@ import { User } from '../class/Users';
 
 export class UserDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   @Input() user: User;
 
@@ -18,8 +19,9 @@ export class UserDetailComponent implements OnInit {
 
   // save user
   saveUser() {
-    console.log('save user');
-    alert(this.user.id);
+    if ( this.user.id > 0) {
+      this.userService.updateUser(this.user);
+    }
   }
 
 }

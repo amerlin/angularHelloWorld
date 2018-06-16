@@ -57,10 +57,19 @@ export class UserService {
     }
 
     // DELETE USERS
-    deleteUser(user) {
+    deleteUser(user: User) {
         const index = this._users.indexOf(user);
         if (index >= 0) {
             this._users.splice(index, 1);
         }
     }
+
+    // FIND AND UPDATE USER
+    updateUser(user: User) {
+        const index = this._users.findIndex((v) => v.id === user.id);
+        if ( index > -1) {
+            this._users[index] = user;
+        }
+    }
+
 }

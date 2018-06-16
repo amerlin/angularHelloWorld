@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpModule } from '@angular/http';
-import { UserInterface } from './interfaces/user';
 import { User } from './class/Users';
 
 @Component({
