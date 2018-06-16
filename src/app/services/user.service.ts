@@ -10,6 +10,7 @@ export class UserService {
     // local var
     private _users: Array<User> = [
         {
+            id:  1,
             name: 'Name001',
             lastname: 'LastName001',
             email: 'email001',
@@ -19,6 +20,7 @@ export class UserService {
             age: '12'
         },
         {
+            id: 2,
             name: 'Name002',
             lastname: 'LastName002',
             email: 'email002',
@@ -28,6 +30,7 @@ export class UserService {
             age: '12'
         },
         {
+            id: 3,
             name: 'Name003',
             lastname: 'LastName003',
             email: 'email003',
@@ -37,6 +40,7 @@ export class UserService {
             age: '12'
         },
         {
+            id: 4,
             name: 'Name004',
             lastname: 'LastName004',
             email: 'email004',
