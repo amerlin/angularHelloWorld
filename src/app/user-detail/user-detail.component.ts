@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { User } from '../class/Users';
 import { UserService } from '../services/user.service';
 
+
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
