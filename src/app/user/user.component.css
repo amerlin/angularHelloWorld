@@ -4,7 +4,7 @@ button.delete { background: #fff; color: green; }
 button {padding:5px; border:1px solid; color:#222; width: 80px;} */
 
 .buttons {
-    width: 80px;
+    width: 60px;
 }
 
 .buttons div {
